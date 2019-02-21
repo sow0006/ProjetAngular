@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AppareilComponent } from './appareil/appareil.component';
+import { AppareilService } from './services/appareil.service';
 
 @Component({
   selector: 'app-root',
@@ -28,7 +30,7 @@ export class AppComponent {
     Status: 'éteint'
   }
 ];
-	constructor() {
+	constructor(private appareilService: AppareilService) {
 		setTimeout(() => {
 			 this.isAuth = true;
 			}, 400
