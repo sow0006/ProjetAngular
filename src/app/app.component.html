@@ -8,9 +8,10 @@
           <app-appareil [appareilName]="appareilTwo" [appareilStatus]="'allumé'"></app-appareil>
           <app-appareil [appareilName]="appareilThree" [appareilStatus]="'éteint'"></app-appareil>
           -->
-          <app-appareil *ngFor="let appareil of appareils"
+          <app-appareil *ngFor="let appareil of appareils; let i = index"
                          [appareilName]="appareil.name"
-                         [appareilStatus]="appareil.Status"></app-appareil>
+                         [appareilStatus]="appareil.Status"
+                         [index]="i"></app-appareil>
       </ul>
       <button class="btn btn-success"
                     [disabled] = "!isAuth"

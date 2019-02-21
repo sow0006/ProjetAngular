@@ -25,4 +25,12 @@ export class AppareilService {
               appareil.Status = 'éteint';
           }
       }
+
+      switchOnOne(i: number){
+        this.appareils[i].Status = 'allumé';
+      }
+
+      switchOffOne(i: number){
+        this.appareils[i].Status = 'éteint';
+      }
 }

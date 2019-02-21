@@ -18,20 +18,7 @@ export class AppComponent {
     },2000
   );
   });
-  appareils = [
-  {
-    name: 'Machine à laver',
-    Status: 'éteint'
-  },
-  {
-    name: 'Frigo',
-    Status: 'allumé'
-  },
-  {
-    name: 'Ordinateur',
-    Status: 'éteint'
-  }
-];
+
 	constructor(private appareilService: AppareilService) {
 		setTimeout(() => {
 			 this.isAuth = true;
